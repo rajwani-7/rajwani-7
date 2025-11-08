@@ -17,7 +17,7 @@ jobs:
           python-version: '3.x'
 
       - name: Run cat animation generator
-        run: python scripts/cat_animation.py
+        run: python cat_animation.py
 
       - name: Commit and push animation
         run: |
