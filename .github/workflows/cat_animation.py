@@ -1,16 +1,13 @@
 # .github/workflows/cat_animation.py
-
 import os
 from datetime import datetime
 
 # ✅ Ensure folder exists
 os.makedirs("assets", exist_ok=True)
 
-# 🕒 Add timestamp to help see auto-update
 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-svg_content = f"""
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400">
+svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400">
   <rect width="100%" height="100%" fill="#0a0a0a"/>
   
   <!-- Ground -->
@@ -19,7 +16,6 @@ svg_content = f"""
   <!-- 🐱 Cat -->
   <text x="50" y="300" font-size="60">
     🐱
-    <!-- Cat moves horizontally -->
     <animateTransform attributeName="transform"
                       type="translate"
                       values="0,0; 600,0; 0,0"
@@ -29,14 +25,12 @@ svg_content = f"""
 
   <!-- 🧶 Wool Ball -->
   <circle cx="120" cy="310" r="15" fill="pink">
-    <!-- Ball follows same horizontal motion, slightly delayed -->
     <animateTransform attributeName="transform"
                       type="translate"
                       values="0,0; 600,0; 0,0"
                       dur="10s"
                       begin="0.5s"
                       repeatCount="indefinite"/>
-    <!-- Ball rotation for rolling effect -->
     <animateTransform attributeName="transform"
                       additive="sum"
                       type="rotate"
@@ -45,7 +39,6 @@ svg_content = f"""
                       repeatCount="indefinite"/>
   </circle>
 
-  <!-- Text Label -->
   <text x="20" y="50" fill="white" font-size="22">
     🐾 Cat chasing wool ball 🧶 (last updated {timestamp})
     <animate attributeName="opacity"
@@ -56,7 +49,7 @@ svg_content = f"""
 </svg>
 """
 
-with open("assets/cat.svg", "w") as f:
+with open("assets/cat.svg", "w", encoding="utf-8") as f:
     f.write(svg_content)
 
 print("✅ Animated cat and wool ball SVG generated successfully!")
