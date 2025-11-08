@@ -16,6 +16,10 @@ jobs:
         with:
           python-version: '3.x'
 
+      # ✅ New step added here
+      - name: Ensure assets folder exists
+        run: mkdir -p assets
+
       - name: Run cat animation generator
         run: python .github/workflows/cat_animation.py
 
