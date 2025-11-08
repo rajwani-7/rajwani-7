@@ -82,3 +82,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/rajwani-7/rajwani-7/output/github-contribution-grid-snake.svg" alt="snake animation" />
 </div>
+
+
+![Cat Animation](./assets/cat.svg)
+
