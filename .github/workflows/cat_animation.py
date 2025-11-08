@@ -1,26 +1,62 @@
 # .github/workflows/cat_animation.py
 
-import math
 import os
 from datetime import datetime
 
-# ✅ Create folder if not exists
+# ✅ Ensure folder exists
 os.makedirs("assets", exist_ok=True)
 
-second = datetime.now().second
-cat_x = 100 + 40 * math.sin(second)
-ball_x = 100 + 60 * math.sin(second + 1)
+# 🕒 Add timestamp to help see auto-update
+timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 svg_content = f"""
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="400">
-  <rect width="100%" height="100%" fill="black"/>
-  <text x="{cat_x+20}" y="250" font-size="60">🐱</text>
-  <circle cx="{ball_x+150}" cy="270" r="12" fill="pink"/>
-  <text x="20" y="50" fill="white" font-size="22">🐾 Cat chasing wool ball 🧶</text>
+  <rect width="100%" height="100%" fill="#0a0a0a"/>
+  
+  <!-- Ground -->
+  <rect y="320" width="800" height="80" fill="#333"/>
+
+  <!-- 🐱 Cat -->
+  <text x="50" y="300" font-size="60">
+    🐱
+    <!-- Cat moves horizontally -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 600,0; 0,0"
+                      dur="10s"
+                      repeatCount="indefinite"/>
+  </text>
+
+  <!-- 🧶 Wool Ball -->
+  <circle cx="120" cy="310" r="15" fill="pink">
+    <!-- Ball follows same horizontal motion, slightly delayed -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0; 600,0; 0,0"
+                      dur="10s"
+                      begin="0.5s"
+                      repeatCount="indefinite"/>
+    <!-- Ball rotation for rolling effect -->
+    <animateTransform attributeName="transform"
+                      additive="sum"
+                      type="rotate"
+                      from="0 120 310" to="360 120 310"
+                      dur="1s"
+                      repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Text Label -->
+  <text x="20" y="50" fill="white" font-size="22">
+    🐾 Cat chasing wool ball 🧶 (last updated {timestamp})
+    <animate attributeName="opacity"
+             values="1;0.7;1"
+             dur="3s"
+             repeatCount="indefinite"/>
+  </text>
 </svg>
 """
 
 with open("assets/cat.svg", "w") as f:
     f.write(svg_content)
 
-print("✅ Cat animation SVG generated successfully!")
+print("✅ Animated cat and wool ball SVG generated successfully!")
