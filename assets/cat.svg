@@ -16,24 +16,8 @@
                       repeatCount="indefinite"/>
   </text>
 
-  <!-- 🧶 Wool Ball -->
-  <circle cx="120" cy="310" r="15" fill="pink">
-    <!-- Ball follows same horizontal motion, slightly delayed -->
-    <animateTransform attributeName="transform"
-                      type="translate"
-                      values="0,0; 600,0; 0,0"
-                      dur="10s"
-                      begin="0.5s"
-                      repeatCount="indefinite"/>
-    <!-- Ball rotation for rolling effect -->
-    <animateTransform attributeName="transform"
-                      additive="sum"
-                      type="rotate"
-                      from="0 120 310" to="360 120 310"
-                      dur="1s"
-                      repeatCount="indefinite"/>
-  </circle>
-
+  
+  
   <!-- Text Label -->
   <text x="20" y="50" fill="white" font-size="22">
     🐾 Meow (last updated 2025-11-08 11:51:25)
