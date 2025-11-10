@@ -15,7 +15,7 @@ svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="800" height="40
 
   <!-- 🐱 Cat -->
   <text x="50" y="300" font-size="60">
-    🐱
+    🐈
     <animateTransform attributeName="transform"
                       type="translate"
                       values="0,0; 600,0; 0,0"
@@ -40,7 +40,7 @@ svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="800" height="40
   </circle>
 
   <text x="20" y="50" fill="white" font-size="22">
-    🐾 Cat chasing wool ball 🧶 (last updated {timestamp})
+    🐾 Meow (last updated {timestamp})
     <animate attributeName="opacity"
              values="1;0.7;1"
              dur="3s"
