@@ -7,7 +7,7 @@
 
   <!-- 🐱 Cat -->
   <text x="50" y="300" font-size="60">
-    🐱
+    🐈
     <!-- Cat moves horizontally -->
     <animateTransform attributeName="transform"
                       type="translate"
@@ -36,7 +36,7 @@
 
   <!-- Text Label -->
   <text x="20" y="50" fill="white" font-size="22">
-    🐾 Cat chasing wool ball 🧶 (last updated 2025-11-08 11:51:25)
+    🐾 Meow (last updated 2025-11-08 11:51:25)
     <animate attributeName="opacity"
              values="1;0.7;1"
              dur="3s"
