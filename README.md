@@ -42,9 +42,9 @@
 
 <h3 align="left">📊 Projects</h3>
 
-- 🗣️ **Text-to-Speech Converter** — Python, gTTS  
-- 🛍️ **Azad Sweet Mart Web App** — PHP, Tailwind, MySQL  
-- 🧑‍🏫 **Faculty Feedback System** — Flask, SQLite, HTML/CSS  
+- 🗣️ **Text-to-Speech Converter** — Python, gTTS  :https://web-production-0f3db.up.railway.app/
+- 🛍️ **Azad Sweet Mart Web App** — PHP, Tailwind, MySQL  :https://azadsweetmart.22web.org/?i=1
+- 🧑‍🏫 **Faculty Feedback System** — Flask, SQLite, HTML/CSS :https://faculty-feedback-system-dzeg.onrender.com/
 - 📈 **Sales Data Dashboard** — Power BI, Python, SQL  
 
 ###
